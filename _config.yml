@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://nrcpts.github.io
+title: AB
+subtitle: 
+author: Andri Burman
 simple_search: https://www.google.com/search
 description:
 
