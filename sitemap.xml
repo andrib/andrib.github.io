@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://nrcpts.github.io/blog/2014/07/07/pemuda-indonesia-calon-negarawan-atau-politikus/</loc>
+    <lastmod>2014-07-07T16:28:10+07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://nrcpts.github.io/blog/2014/04/10/layanan-smtp-relay-berbayar/</loc>
     <lastmod>2014-04-10T13:10:10+07:00</lastmod>
     <priority>0.8</priority>
@@ -28,17 +34,17 @@
   
   
   <url>
-    <loc>http://nrcpts.github.io/</loc>
-    <lastmod>2014-07-06T15:54:38+07:00</lastmod>
+    <loc>http://nrcpts.github.io/blog/archives/</loc>
+    <lastmod>2014-07-07T17:41:50+07:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>http://nrcpts.github.io/blog/archives/</loc>
-    <lastmod>2014-07-06T15:54:38+07:00</lastmod>
+    <loc>http://nrcpts.github.io/</loc>
+    <lastmod>2014-07-07T17:41:50+07:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>1.0</priority>
   </url>
   
   
