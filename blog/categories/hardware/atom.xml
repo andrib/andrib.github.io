@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Hardware, | AB]]></title>
+  <link href="http://nrcpts.github.io/blog/categories/hardware/atom.xml" rel="self"/>
+  <link href="http://nrcpts.github.io/"/>
+  <updated>2014-07-06T15:54:38+07:00</updated>
+  <id>http://nrcpts.github.io/</id>
+  <author>
+    <name><![CDATA[Andri Burman]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mengenal Teknologi RAID Storage]]></title>
+    <link href="http://nrcpts.github.io/blog/2014/04/08/mengenal-teknologi-raid-storage/"/>
+    <updated>2014-04-08T12:14:10+07:00</updated>
+    <id>http://nrcpts.github.io/blog/2014/04/08/mengenal-teknologi-raid-storage</id>
+    <content type="html"><![CDATA[<p><strong>RAID</strong> sebuah akronim lama yang pertama kali didefinisikan oleh David A. Petterson, Garth A. Gibson dan Randy Katz di Berkeley pada tahun 1987 untuk “<strong>Redundant Array Of Inexpensive Disks</strong>”, awalnya istilah ini  diartikan untuk sebuah teknologi media penyimpanan data yang memberikan pengguna komputer mendapatkan performa terbaik dari komponen hard drive yang tergolong low-cost pada personal computer, dan ketangguhan sebuah sistem media penyimpanan data yang dapat dipercaya dengan menggunakan teknik penyusunan beberapa set hard-drive menjadi sebuah array untuk beberapa tujuan yang salah satunya adalah mengenai redundancy data.
+Namun saat ini, seiring berkembangnya industri hardware dan semakin majunya teknologi komputer, RAID sering didefinisikan sebagai “<strong>Redundant Array of Independent Disks</strong>” memiliki definisi yang sama dengan istilah RAID sebelumnya, tetapi sudah tidak lagi menyandang istilah low-cost pada implementasinya.</p>
+
+<p>RAID dikategorikan menjadi beberapa model atau skema, setiap masing-masing skema RAID tersebut memiliki tujuan yang berbeda. Perbedaan beberapa skema RAID tersebut diberi nama dengan format kata RAID di depannya dengan diikuti kode angka, seperti RAID 0, RAID 1, dan lainnya. Beberapa tujuan penting dari skema-skema RAID diantaranya adalah, proteksi terhadap kehilangan data, kapasitas, dan kecepatan. Keperluan mendasar untuk membuat sebuah sistem RAID ada 2 yaitu, RAID controller baik berupa hardware atau software, dan kebutuhan satunya lagi sudah pasti jumlah minimal untuk membentuk sebuah disk array adalah 2 dan akan bertambah tergantung dari fungsi skema yang akan digunakan.</p>
+
+<p>Ilustrasi perintah tulis dari cpu ke hdd:</p>
+
+<p><img class="center <a" src="href="http://www.fujitsu.com/img/STRSYS/system/09-glossary-raid-raid5+0.gif">http://www.fujitsu.com/img/STRSYS/system/09-glossary-raid-raid5+0.gif</a>"></p>
+
+<p>Secara umum, RAID dikategorikan menjadi dua kategori dasar yaitu, “<em>standard levels</em>” dan “<em>nested levels</em>”, standard-levels RAID hanya memiliki 1 kode angka dibelakang istilah RAID dengan maksud 1 kode angka skema tersebut adalah mewakili fungsi dasar dari skema RAID yang dimaksud, sedangkan nested-levels atau sering disebut “<em>non-standard levels</em>” adalah teknik penggabungan fungsi dasar dari skema standard RAID, contohnya RAID 1+0 atau sering ditulis menjadi RAID 10, adalah penggabungan dari skema dasar RAID 1 dan RAID 0.</p>
+
+<p><strong>Beberapa Skema Standard-Levels RAID</strong></p>
+
+<ol>
+<li><p><strong>RAID 0</strong>
+Sering disebut “striped set without parity”, bertujuan memperbaiki performa disk dan perluasan media penyimpanan tetapi tanpa memiliki fitur toleransi kesalahan pada sistem baca/tulis terhadap kelompok hard-drive tersebut. Lebih sering dimanfaatkan sebagai penambah performa sistem media penyimpanan, semakin banyak disk pada array RAID 0 maka akan semakin besar bandwidth yang diperlukan untuk proses baca/tulis. RAID 0 tidak memiliki error-checking, jadi jika terdapat error pada proses baca/tulis sudah pasti kesalahan tersbut tidak dapat diperbaiki, lebih buruknya jika salah satu dari disk didalam array rusak, maka keseluruhan array tersebut ikut menjadi rusak.</p></li>
+<li><p><strong>RAID 1</strong>
+Sering disebut “mirrored set without parity”, bertujuan memberikan kontrol penuh terhadap kemungkinan kesalahan pada sistem media penyimpanan yang terdiri dari array 2 atau lebih hard-drive. Dengan mode ini otomatis akan terjadi penurunan performa kecepatan proses tulis karena  sistem akan menggunakan resource I/O ganda untuk melakukan satu kali penulisan, khusus untuk beberapa model sistem operasi yang memiliki fitur “multi-threaded” yang mendukung “split-seeks”  tidak akan terjadi penurunan performa kecepatan proses baca, bahkan sebaliknya skema RAID ini akan menambahkan performa dalam proses tersebut.</p></li>
+<li><p><strong>RAID 2</strong>
+Sering disebut “striping with parity”, menggunakan metode ECC (error-correcting-code) versi “hamming code”.  Bertujuan untuk mendapatkan efek “striping” dengan “on the fly” koreksi kesalahan. RAID 2 di implementasi dengan teknik dengan melakukan “split” terhadap data pada level “bit”, dan menyebarkannya kedalam beberapa jumlah disk pada array. RAID 2 jarang digunakan karena termasuk konfigurasi yang cukup mahal, membutuhkan hardware RAID controller dan hard-drive yang special.</p></li>
+<li><p><strong>RAID 3</strong>
+Sering disebut “Striped set with dedicated parity”, menggunakan salah satu disk dalam array sebagai “dedicated-parity”, metode strip pada array terjadi pada level byte, kerusakan/kegagalan proses pada array dapat dikendalikan oleh “dedicated-parity” disk ini dengan baik tanpa menurunkan performa array. Kemungkinan akan terjadi “bottleneck” terhadap dedicated-parity disk tersebut, karena disk tersebut harus diakses kapanpun setiap kali array di akses.</p></li>
+<li><p><strong>RAID 4</strong>
+Sering disebut “block level parity”, identik dengan RAID 3 tetapi menggunakan metode block-level striping, dengan menggunakan metode striping ini terbukti meningkatkan performa “random access performance” pada array dibandingkan dengan RAID 3, namun pada RAID ini juga tetap menggunakan “dedicated-parity” sebagai error-control nya dimana dedicated-parity juga mengalami penurunan performa khususnya pada “random access performance”.</p></li>
+<li><p><strong>RAID 5</strong>
+Sering disebut “Striped set with distributed parity”, sama dengan RAID 4 yaitu block-level striping namun pada skema ini error-control pada array menggunakan metode “distributed-parity”, dimana data dan informasi parity disimpan didalam semua disk pada array, ini terbukti mengurangi bottleneck yang terjadi pada metode “dedicated-parity” yang tergantung pada single-unit disk yang berperan sebagai parity disk dari array. Satu drive failure pada array harus segera digantikan dan bangun ulang kondisi array, pada kondisi ini array tidak rusak keseluran hanya akan terjadi penurunan performa pada array, tetapi jika drive failure kedua terjadi pada skema ini maka array akan rusak seluruhnya dan pasti menyebabkan data loss.</p></li>
+<li><p><strong>RAID 6</strong>
+Sering disebut “Striped set with dual distributed parity”, memberikan fitur toleransi kesalahan lebih baik dari RAID 5 dimana array akan tetap berjalan walaupun 2 disk drive pada array telah rusak, salah satu kelebihan dalam error-control pada skema ini adalah sistem mendapatkan toleransi waktu yang lebih untuk membangun ulang array yang rusak, walaupun salah satu dari dua disk drive pengganti tetap gagal dalam melakukan perbaikan ketika array sedang dibangun kembali.</p></li>
+</ol>
+
+
+<p>Untuk “nested-levels” RAID sebenarnya yang terjadi hanyalah konfigurasi dengan cara penggabungan skema “standard-levels” RAID untuk berbagai tujuan tertentu dalam sistem media penyimpanan. Beberapa metode penggabungan tersebut diantaranya adalah RAID 0+1, RAID 1+0, RAID 5+0 dan RAID 5+1.</p>
+
+<p>Referensi:</p>
+
+<ul>
+<li><a href="http://www.pcguide.com/ref/hdd/perf/raid">http://www.pcguide.com/ref/hdd/perf/raid</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Redundant_array_of_independent_disks">http://en.wikipedia.org/wiki/Redundant_array_of_independent_disks</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Nested_RAID_levels">http://en.wikipedia.org/wiki/Nested_RAID_levels</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hamming_code">http://en.wikipedia.org/wiki/Hamming_code</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
