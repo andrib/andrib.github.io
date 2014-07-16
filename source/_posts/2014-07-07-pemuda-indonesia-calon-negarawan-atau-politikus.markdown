@@ -3,7 +3,7 @@ layout: post
 title: "Pemuda Indonesia Calon Negarawan atau Politikus"
 date: 2014-07-07 16:28:10 +0700
 comments: true
-categories: 
+categories: nasionalism, indonesia 
 ---
 
 
