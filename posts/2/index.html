@@ -9,7 +9,7 @@
   <meta name="author" content="Andri Burman">
 
   
-  <meta name="description" content="RAID sebuah akronim lama yang pertama kali didefinisikan oleh David A. Petterson, Garth A. Gibson dan Randy Katz di Berkeley pada tahun 1987 untuk “ &hellip;">
+  <meta name="description" content="Komunikasi email sebuah aplikasi memegang peranan yang sangat penting dan tidak dapat diabaikan begitu saja tentang reliabilitasnya, khususnya pada &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -50,7 +50,7 @@
   <header role="banner"><hgroup>
   <h1><a href="/">AB</a></h1>
   
-    <h2>Will write code for food, as Chuck Norris ask me :)</h2>
+    <h2>Will write code for food, as Chuck Norris ask me..</h2>
   
 </hgroup>
 
@@ -77,6 +77,74 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/04/10/layanan-smtp-relay-berbayar/">Layanan SMTP Relay Berbayar</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-10T13:10:10+07:00" pubdate data-updated="true">Apr 10<sup>th</sup>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Komunikasi email sebuah aplikasi memegang peranan yang sangat penting dan tidak dapat diabaikan begitu saja tentang reliabilitasnya, khususnya pada aplikasi layanan publik yang  dibuat untuk digunakan oleh pengguna umum secara global.</p>
+
+<p>Sebagai contoh, pada sebuah aplikasi web, pada fungsi registrasi pengguna membutuhkan email sebagai alat untuk validasi akun pengguna, sebagai media notifikasi bagi pengguna, atau juga digunakan sebagai <em>mailing list</em> dalam aplikasi, tetapi apa yang terjadi jika semua email yang dikirim tidak terlihat dalam <em>inbox</em> para recipients? Tentunya bukan merupakan alasan yang baik dalam membentuk layanan dari aplikasi, jika kita pernah mengatakan kalimat &ldquo;<em>coba cek spam box anda..</em>&rdquo; kepada <em>recipients</em> dari aplikasi kita :)</p>
+
+<p>Dalam lingkup sistem administrasi baik server-server berbasis linux atau lainnya, biasanya memiliki kendala pada sistem MTA (<em>Mail Transfer Agent</em>) pada mail server, seperti blacklist ip, whitelist ip, spam scores, spam complaints, atau konfigurasi server mail yang buruk, yang menyebabkan setiap email yang terkirim dari mail server tersebut dianggap SPAM oleh banyak mail server global, terutama penyedia layanan besar seperti yahoo dam google.</p>
+
+<p>Banyak hal/persayaratan sebuah mail server yang kita buat dapat memiliki reputasi sending yang baik dalam skala global, dan hal tersebut membutuhkan waktu lama, khususnya dalam reputasi domain sender, domain-domain baru yang kita gunakan bisa saja akan tetap dianggap SPAM walaupun sudah memiliki mail server yang terkonfigurasi dengan baik.</p>
+
+<p>Solusi sementara yang efektif bagi bisnis adalah dengan tetap menjalankan komunikasi email dari aplikasi dengan menggunakan layanan <em>smtp relay</em> berbayar, dengan cara ini aplikasi yang mengirimkan email melalui MTA harus melakukan metode relay ke MTA milik layanan smtp relay berbayar yang digunakan, dengan cara tersebut email yang terkirim melalui aplikasi memiliki garansi terkirim dengan baik ke seluruh tujuan recipients.</p>
+
+<p>Berikut ini adalah beberapa layanan smtp relay berbayar yang dapat digunakan:</p>
+
+<ul>
+<li><a href="http://postmarkapp.com/">Postmark</a></li>
+<li><a href="http://aws.amazon.com/ses/">Amazon SES</a></li>
+<li><a href="http://sendgrid.com/">Sendgrid</a></li>
+<li><a href="http://socketlabs.com/">SocketLabs</a></li>
+<li><a href="http://www.mailjet.com/">MailJet</a></li>
+<li><a href="http://www.elasticemail.com/">Elastic Mail</a></li>
+<li><a href="http://www.elasticemail.com/">smtp2go</a></li>
+</ul>
+
+
+<p>Dari beberapa layanan diatas yang pernah saya coba, hanya postmark dan smtp2go, postmark adalah layanan kedua setelah saya gagal pada smtp2go :)</p>
+
+<p>Kedua layanan sebenarnya ini cukup baik, smtp2go sangat mudah dalam proses instalasi, hanya saja smtp2go memiliki peraturan yang terlalu <em>strict</em> dalam masalah spam complaints dan reputasi akun kita (berhubungan dengan pola kirim email aplikasi), yang akhirnya jadi menyebalkan :)</p>
+
+<br />
+
+
+<p><img class="center" src="/images/img/postmark.png"></p>
+
+<p><a href="http://postmarkapp.com/">Postmark</a> memiliki kelebihan lain dalam masalah perhitungan sewa layanan, yaitu menggunakan <em>credits</em> untuk mengirim email, jika kita memiliki 1000 credit, maka mail server kita bisa menggunakan relay sebanyak 1000 email terkirim. Pricing credits yang diberikan juga cukup murah, saat ini $7.5 per 1000 credit. Metode pricing menggunakan <em>credits</em> ini dinilai cocok bagi startup yang sebenarnya belum membutuhkan terlalu banyak komunikasi email pada tahap awal, tentunya tidak cocok jika menggunakan layanan smtp relay yang memiliki <em>bulk sending quota</em> dalam waktu yang ditentukan baik <em>annually</em> atau <em>monthly</em></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -155,51 +223,6 @@ Sering disebut “Striped set with dual distributed parity”, memberikan fitur 
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/06/ghost-platform-blog-berbasis-nodejs/">Ghost - Platform Blog Berbasis Nodejs</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-06T13:30:50+07:00" pubdate data-updated="true">Apr 6<sup>th</sup>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://ghost.org/">Ghost</a> merupakan platform blog sederhana dan cepat berbasis node.js, dibuat khusus sebagai <em>blog publishing engine</em>, dirancang dengan baik dan terstruktur serta memiliki kendali kustomisasi penuh bagi developer untuk mengubah isi konten, mengubah tampilan dengan mudah (membuat <em>template</em> desain sendiri) atau bahkan membuat modul program node.js tersendiri, <a href="http://ghost.org/">Ghost</a> dibuat sepenuhnya terbuka (<em>Open Source</em> ).</p>
-
-<p align='center'>
-<img class="left" src="/images/img/ghost.png" width="350" height="350" title="image" alt="images">
-</p>
-
-
-<p>Seperti <em>blog publishing engine</em> pada umumnya, <a href="http://ghost.org/">Ghost</a> memiliki alur penggunaan aplikasi web yang sama, hanya saja sedikit berbeda pada modul <em>content management system</em> atau sering disebut sebagai <em>dashboard</em> pada <em>engine blog</em>, yaitu menggunakan <em>markdown</em> sebagai fungsi edit post, yang memudahkan web developer untuk tidak tergantung kepada wysiwyg editor berbasis javascript yang konvensional seperti ckeditor dan lainnya.</p>
-
-<p><a href="http://ghost.org/">Ghost</a> &ldquo;berjalan&rdquo; di atas framwork node.js sepenuhnya, memiliki berbagai <em>driver</em> database untuk digunakan seperti postgre dan mysql yang tergolong <em>relational database</em>, selain itu Ghost juga mendukung penggunaan <strong>NoSQL</strong> database seperti MongoDB dan lainnya. Bagi para developer web yang terbiasa menggunakan <strong>LAMP Stack</strong>, mungkin sudah saatnya mulai mencoba beralih stack yang berbeda seperti node.js dalam membuat sebuah website, sebagian orang menganggap node.js ini masih baru dan belum bisa dikategorikan sebagai framework web development dalam skala <em>enterprise</em>, tetapi perlu dipertimbangkan bahwa node.js ini membuat proses development lebih cepat dan menghasilkan aplikasi web yang <em>scalable</em> :)</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/3">&larr; Older</a>
@@ -217,6 +240,10 @@ Sering disebut “Striped set with dual distributed parity”, memberikan fitur 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/07/16/ricuh-quick-count/">QuickCount - Kertas Paku Kotak</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/07/07/pemuda-indonesia-calon-negarawan-atau-politikus/">Pemuda Indonesia Calon Negarawan Atau Politikus</a>
       </li>
     
@@ -230,10 +257,6 @@ Sering disebut “Striped set with dual distributed parity”, memberikan fitur 
     
       <li class="post">
         <a href="/blog/2014/04/06/ghost-platform-blog-berbasis-nodejs/">Ghost - Platform Blog Berbasis Nodejs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/01/first-post-with-jekyll/">First Post With Jekyll</a>
       </li>
     
   </ul>

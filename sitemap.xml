@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://nrcpts.github.io/blog/2014/07/16/ricuh-quick-count/</loc>
+    <lastmod>2014-07-16T16:14:10+07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://nrcpts.github.io/blog/2014/07/07/pemuda-indonesia-calon-negarawan-atau-politikus/</loc>
     <lastmod>2014-07-07T16:28:10+07:00</lastmod>
     <priority>0.8</priority>
@@ -35,14 +41,14 @@
   
   <url>
     <loc>http://nrcpts.github.io/blog/archives/</loc>
-    <lastmod>2014-07-16T16:32:23+07:00</lastmod>
+    <lastmod>2014-07-16T17:22:44+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://nrcpts.github.io/</loc>
-    <lastmod>2014-07-16T16:32:23+07:00</lastmod>
+    <lastmod>2014-07-16T17:22:44+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
