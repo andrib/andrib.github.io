@@ -4,7 +4,7 @@
 
 url: http://nrcpts.github.io
 title: AB
-subtitle: 
+subtitle: Will write code for food, as Chuck Norris ask me :)
 author: Andri Burman
 simple_search: https://www.google.com/search
 description:
@@ -91,11 +91,11 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: andriburman
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-52889477-1
 
 # Facebook Like
 facebook_like: false
