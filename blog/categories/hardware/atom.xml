@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Hardware, | AB]]></title>
+  <title><![CDATA[Category: hardware, | AB]]></title>
   <link href="http://nrcpts.github.io/blog/categories/hardware/atom.xml" rel="self"/>
   <link href="http://nrcpts.github.io/"/>
-  <updated>2014-07-16T17:22:44+07:00</updated>
+  <updated>2014-08-21T17:11:40+07:00</updated>
   <id>http://nrcpts.github.io/</id>
   <author>
     <name><![CDATA[Andri Burman]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Mengenal Teknologi RAID Storage]]></title>
+    <title type="html"><![CDATA[Mengenal Teknologi RAID storage]]></title>
     <link href="http://nrcpts.github.io/blog/2014/04/08/mengenal-teknologi-raid-storage/"/>
     <updated>2014-04-08T12:14:10+07:00</updated>
     <id>http://nrcpts.github.io/blog/2014/04/08/mengenal-teknologi-raid-storage</id>

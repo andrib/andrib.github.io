@@ -41,14 +41,21 @@
   
   <url>
     <loc>http://nrcpts.github.io/blog/archives/</loc>
-    <lastmod>2014-07-16T17:22:44+07:00</lastmod>
+    <lastmod>2014-08-21T17:11:40+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://nrcpts.github.io/blog/</loc>
+    <lastmod>2014-08-21T17:11:40+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://nrcpts.github.io/</loc>
-    <lastmod>2014-07-16T17:22:44+07:00</lastmod>
+    <lastmod>2014-08-21T17:11:40+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
