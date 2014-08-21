@@ -9,7 +9,7 @@
   <meta name="author" content="Andri Burman">
 
   
-  <meta name="description" content="Archives AB Will write code for food, as Chuck Norris ask me.. Home Archives About Feed Recent Posts QuickCount - Kertas Paku Kotak Pemuda Indonesia &hellip;">
+  <meta name="description" content="Search Results $('#search_results').tapir({ 'token': '', 'complete' : function() { document.getElementById('search_loading').style.display="none &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://nrcpts.github.io/">
+  <link rel="canonical" href="http://nrcpts.github.io/search.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -78,80 +78,22 @@
 </nav> -->
   <div id="main">
     <div id="content">
-      <div class="blog-index">
-  
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives/"> Archives </a>
-    
-  </div>
+      <h1 class="entry-title"><center>Search Results</center></h1>
+<div id="search_loading" style="margin: 40px 0">
+    <center><img src="/images/loading.gif"></center>
 </div>
-<aside class="sidebar">
-  
-    <section id="titles">
-  <a href="http://nrcpts.github.io" title="AB"><img id="logo" src="http://nrcpts.github.io/images/" /></a>
-  <h1 id="site_title"><a href="http://nrcpts.github.io" title="AB">AB</a></h1>
-  <h3 id="site_subtitle">Will write code for food, as Chuck Norris ask me..</h3>
-</section>
 
-<section id="menu">
-  <ul>
-    <li><i class="fa fa-home fa-lg"></i><a href="http://nrcpts.github.io"> Home </a></li>
-    <li><i class="fa fa-calendar fa-lg"></i><a href="http://nrcpts.github.io/blog/archives/"> Archives </a></li>
-    <li><i class="fa fa-user fa-lg"></i><a href="http://nrcpts.github.io/about/"> About </a></li>
-    <li><i class="fa fa-rss fa-lg"></i><a href="http://nrcpts.github.io/atom.xml"> Feed </a></li>
-  </ul>
-</section>
+<script type="text/javascript" src="/javascripts/jquery-tapir.js"></script>
+<div id="search_results" style="display:none">
+<br>
+</div>
+<script>
+         $('#search_results').tapir({
+             'token': '',
+             'complete' : function() { document.getElementById('search_loading').style.display="none"; }
+         });
+</script>
 
-<section id="social">
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-
-<section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2014/07/16/ricuh-quick-count/">QuickCount - Kertas Paku Kotak</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/07/07/pemuda-indonesia-calon-negarawan-atau-politikus/">Pemuda Indonesia Calon Negarawan atau Politikus</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/10/layanan-smtp-relay-berbayar/">Layanan SMTP Relay Berbayar</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/08/mengenal-teknologi-raid-storage/">Mengenal Teknologi RAID storage</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/06/ghost-platform-blog-berbasis-nodejs/">Ghost - Platform Blog berbasis nodejs</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-  
-</aside>
 
     </div>
   </div>
